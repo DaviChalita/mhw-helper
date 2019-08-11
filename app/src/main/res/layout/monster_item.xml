@@ -19,10 +19,8 @@
         <ImageView
             android:id="@+id/imageViewMonster"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="300dp"
             android:layout_margin="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/textViewFire"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewMonster"
@@ -48,38 +46,32 @@
             android:id="@+id/textViewFire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
             android:text="Fire"
-            app:layout_constraintBottom_toTopOf="@+id/imageViewFire"
             app:layout_constraintEnd_toEndOf="@+id/imageViewFire"
-            app:layout_constraintStart_toStartOf="@+id/imageViewFire" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageViewFire"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMonster" />
 
         <ImageView
             android:id="@+id/imageViewFire"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/imageViewWater"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFire"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/imageViewWater"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageViewThunder"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewFire"
+            app:layout_constraintTop_toTopOf="@+id/imageViewFire"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -90,6 +82,7 @@
             android:text="Water"
             app:layout_constraintBottom_toTopOf="@+id/imageViewWater"
             app:layout_constraintEnd_toEndOf="@+id/imageViewWater"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageViewWater"
             app:layout_constraintTop_toTopOf="@+id/textViewFire" />
 
@@ -97,14 +90,10 @@
             android:id="@+id/imageViewThunder"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageViewIce"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewWater"
+            app:layout_constraintTop_toTopOf="@+id/imageViewWater"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -115,6 +104,7 @@
             android:text="Thunder"
             app:layout_constraintBottom_toTopOf="@+id/imageViewThunder"
             app:layout_constraintEnd_toEndOf="@+id/imageViewThunder"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageViewThunder"
             app:layout_constraintTop_toTopOf="@+id/textViewWater" />
 
@@ -122,14 +112,10 @@
             android:id="@+id/imageViewIce"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageViewDragon"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewThunder"
+            app:layout_constraintTop_toTopOf="@+id/imageViewThunder"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -140,6 +126,7 @@
             android:text="Ice"
             app:layout_constraintBottom_toTopOf="@+id/imageViewIce"
             app:layout_constraintEnd_toEndOf="@+id/imageViewIce"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageViewIce"
             app:layout_constraintTop_toTopOf="@+id/textViewThunder" />
 
@@ -147,14 +134,10 @@
             android:id="@+id/imageViewDragon"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewIce"
+            app:layout_constraintTop_toTopOf="@+id/imageViewIce"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -165,7 +148,108 @@
             android:text="Dragon"
             app:layout_constraintBottom_toTopOf="@+id/imageViewDragon"
             app:layout_constraintEnd_toEndOf="@+id/imageViewDragon"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageViewDragon"
             app:layout_constraintTop_toTopOf="@+id/textViewIce" />
+
+        <TextView
+            android:id="@+id/textViewPoison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Poison"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewPoison"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPoison"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPoison"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewFire" />
+
+        <ImageView
+            android:id="@+id/imageViewPoison"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewFire"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleep"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewSleep"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageViewSleep"
+            app:layout_constraintTop_toTopOf="@+id/textViewPoison" />
+
+        <ImageView
+            android:id="@+id/imageViewSleep"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewWater"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPoison"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewParalysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paralysis"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewParalysis"
+            app:layout_constraintStart_toStartOf="@+id/imageViewParalysis"
+            app:layout_constraintTop_toTopOf="@+id/textViewSleep" />
+
+        <ImageView
+            android:id="@+id/imageViewParalysis"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewThunder"
+            app:layout_constraintTop_toTopOf="@+id/imageViewSleep"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewBlast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blast"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBlast"
+            app:layout_constraintStart_toStartOf="@+id/imageViewBlast"
+            app:layout_constraintTop_toTopOf="@+id/textViewParalysis" />
+
+        <ImageView
+            android:id="@+id/imageViewBlast"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewIce"
+            app:layout_constraintTop_toTopOf="@+id/imageViewParalysis"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewStun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stun"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewStun"
+            app:layout_constraintStart_toStartOf="@+id/imageViewStun"
+            app:layout_constraintTop_toTopOf="@+id/textViewBlast" />
+
+        <ImageView
+            android:id="@+id/imageViewStun"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewDragon"
+            app:layout_constraintStart_toStartOf="@+id/imageViewDragon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewBlast"
+            tools:srcCompat="@tools:sample/avatars" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

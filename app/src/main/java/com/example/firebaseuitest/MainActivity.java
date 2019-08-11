@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.firebaseuitest.modelo.Monster;
@@ -67,79 +68,43 @@ public class MainActivity extends AppCompatActivity {
             protected void onBindViewHolder(MonsterViewHolder holder, int position, Monster model) {
 
                 //Generalizar metodos repetidos do Picasso
-                Picasso.get().load(model.getimageLink()).into(holder.imageMonster, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
+                callPicasso(model.getimageLink(), holder.imageMonster);
 
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getfire(), holder.imageFire);
 
-                Picasso.get().load(model.getfire()).into(holder.imageFire, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
+                callPicasso(model.getwater(), holder.imageWater);
 
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getthunder(), holder.imageThunder);
 
-                Picasso.get().load(model.getwater()).into(holder.imageWater, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
+                callPicasso(model.getice(), holder.imageIce);
 
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getdragon(), holder.imageDragon);
 
-                Picasso.get().load(model.getthunder()).into(holder.imageThunder, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
+                callPicasso(model.getPoison(), holder.imagePoison);
 
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getSleep(), holder.imageSleep);
 
-                Picasso.get().load(model.getice()).into(holder.imageIce, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
+                callPicasso(model.getParalysis(), holder.imageParalysis);
 
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getBlast(), holder.imageBlast);
 
-                Picasso.get().load(model.getdragon()).into(holder.imageDragon, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                    }
-
-                    @Override
-                    public void onError(Exception e) {
-                        Toast.makeText(getApplicationContext(), e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+                callPicasso(model.getStun(), holder.imageStun);
 
                 holder.textName.setText(model.getname());
+            }
+
+            private void callPicasso(String s, ImageView image) {
+                Picasso.get().load(s).into(image, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                        Toast.makeText(getApplicationContext(), e.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @NonNull
@@ -178,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
